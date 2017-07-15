@@ -1,2 +1,2 @@
-# usd_to_inr
-US Dollars to Indian Rupee helper for trend and notifications
+# USD To INR
+US Dollars to Indian Rupee helper for trends and notifications
