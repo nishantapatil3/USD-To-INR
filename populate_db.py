@@ -11,12 +11,11 @@ port = 8086
 
 client = InfluxDBClient(host, port, USER, PASSWORD, DBNAME)
 # client.drop_database(DBNAME)
-# client.create_database(DBNAME)
+client.create_database(DBNAME)
 # client.switch_database(DBNAME)
 # client.create_retention_policy('awesome_policy', '2d', 3, default=True)
 
-num_days = 10
-
+num_days = 1000
 
 def get_usd_inr_history(day):
     rates = Fixerio(base='USD', symbols=['USD', 'INR'])
@@ -40,7 +39,10 @@ def main():
                 "fields": rate_dict["rates"]
             }
         ]
+
         print json_body
+
+
         print client.write_points(json_body)
 
 if __name__ == '__main__':

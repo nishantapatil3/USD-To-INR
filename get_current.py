@@ -10,6 +10,8 @@ def main():
     current = get_usd_inr()
     print current
 
+    print current["date"] + "T00:00:00Z"
+    print current["rates"]
 
 if __name__ == '__main__':
     main()
