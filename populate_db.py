@@ -11,7 +11,7 @@ port = 8086
 
 client = InfluxDBClient(host, port, USER, PASSWORD, DBNAME)
 # client.drop_database(DBNAME)
-# client.create_database(DBNAME)
+client.create_database(DBNAME)
 # client.switch_database(DBNAME)
 # client.create_retention_policy('awesome_policy', '2d', 3, default=True)
 
