@@ -1,4 +1,5 @@
 from fixerio import Fixerio
+from get_exchange_info import *
 
 
 def get_usd_inr():
@@ -7,11 +8,10 @@ def get_usd_inr():
 
 
 def main():
-    current = get_usd_inr()
+    current = get_google_exchange()
     print current
 
-    print current["date"] + "T00:00:00Z"
-    print current["rates"]
+    
 
 if __name__ == '__main__':
     main()

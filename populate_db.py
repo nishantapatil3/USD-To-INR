@@ -1,7 +1,10 @@
 import datetime
 from fixerio import Fixerio
 from influxdb import InfluxDBClient
+from get_exchange_info import *
+import sched, time
 
+s = sched.scheduler(time.time, time.sleep)
 
 USER = 'root'
 PASSWORD = 'root'
@@ -23,7 +26,7 @@ def get_usd_inr_history(day):
     return rates.historical_rates(day)
 
 
-def main():
+def populate_db_history():
     rate_dict = {}
     base = datetime.date.today()
     dates = [base - datetime.timedelta(days=x) for x in range(0, num_days)]
@@ -41,6 +44,31 @@ def main():
             }
         ]
         print client.write_points(json_body)
+
+
+def populate_db_current(sc):
+    rate_dict = {}
+    date_time = datetime.datetime.today()
+
+    current_rate = get_google_exchange()
+    
+    json_body = [
+            {
+                "measurement": "rate",
+                "tags": {"Currency": "INR"},
+                "time": date_time,
+                "fields": {"INR": current_rate}
+            }
+        ]
+
+    print client.write_points(json_body)
+    s.enter(60, 1, populate_db_current, (sc,))
+
+def main():
+    #populate_db_current()
+    s.enter(1, 1, populate_db_current, (s,))
+    s.run()
+
 
 if __name__ == '__main__':
     main()
