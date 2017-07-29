@@ -20,7 +20,6 @@ client.create_retention_policy('shorty', '2d', 3, default=True)
 
 num_days = 1000
 
-
 def get_usd_inr_history(day):
     rates = Fixerio(base='USD', symbols=['USD', 'INR'])
     return rates.historical_rates(day)
@@ -43,6 +42,10 @@ def populate_db_history():
                 "fields": rate_dict["rates"]
             }
         ]
+
+        print json_body
+
+
         print client.write_points(json_body)
 
 

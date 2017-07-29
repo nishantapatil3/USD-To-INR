@@ -1,0 +1,31 @@
+/usr/bin/python2.7 /home/nish/PycharmProjects/usd_to_inr/populate_db.py
+{u'date': u'2017-07-14', u'base': u'USD', u'rates': {u'INR': 64.385}}
+[{'fields': {u'INR': 64.385}, 'tags': {'Currency': 'INR'}, 'time': u'2017-07-14T00:00:00Z', 'measurement': 'rate'}]
+True
+{u'date': u'2017-07-14', u'base': u'USD', u'rates': {u'INR': 64.385}}
+[{'fields': {u'INR': 64.385}, 'tags': {'Currency': 'INR'}, 'time': u'2017-07-14T00:00:00Z', 'measurement': 'rate'}]
+True
+{u'date': u'2017-07-14', u'base': u'USD', u'rates': {u'INR': 64.385}}
+[{'fields': {u'INR': 64.385}, 'tags': {'Currency': 'INR'}, 'time': u'2017-07-14T00:00:00Z', 'measurement': 'rate'}]
+True
+{u'date': u'2017-07-13', u'base': u'USD', u'rates': {u'INR': 64.45}}
+[{'fields': {u'INR': 64.45}, 'tags': {'Currency': 'INR'}, 'time': u'2017-07-13T00:00:00Z', 'measurement': 'rate'}]
+True
+{u'date': u'2017-07-12', u'base': u'USD', u'rates': {u'INR': 64.535}}
+[{'fields': {u'INR': 64.535}, 'tags': {'Currency': 'INR'}, 'time': u'2017-07-12T00:00:00Z', 'measurement': 'rate'}]
+True
+{u'date': u'2017-07-11', u'base': u'USD', u'rates': {u'INR': 64.59}}
+[{'fields': {u'INR': 64.59}, 'tags': {'Currency': 'INR'}, 'time': u'2017-07-11T00:00:00Z', 'measurement': 'rate'}]
+True
+{u'date': u'2017-07-10', u'base': u'USD', u'rates': {u'INR': 64.495}}
+[{'fields': {u'INR': 64.495}, 'tags': {'Currency': 'INR'}, 'time': u'2017-07-10T00:00:00Z', 'measurement': 'rate'}]
+True
+{u'date': u'2017-07-07', u'base': u'USD', u'rates': {u'INR': 64.578}}
+[{'fields': {u'INR': 64.578}, 'tags': {'Currency': 'INR'}, 'time': u'2017-07-07T00:00:00Z', 'measurement': 'rate'}]
+True
+{u'date': u'2017-07-07', u'base': u'USD', u'rates': {u'INR': 64.578}}
+[{'fields': {u'INR': 64.578}, 'tags': {'Currency': 'INR'}, 'time': u'2017-07-07T00:00:00Z', 'measurement': 'rate'}]
+True
+{u'date': u'2017-07-07', u'base': u'USD', u'rates': {u'INR': 64.578}}
+[{'fields': {u'INR': 64.578}, 'tags': {'Currency': 'INR'}, 'time': u'2017-07-07T00:00:00Z', 'measurement': 'rate'}]
+True
