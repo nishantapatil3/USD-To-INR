@@ -16,7 +16,7 @@ client = InfluxDBClient(host, port, USER, PASSWORD, DBNAME)
 # client.drop_database(DBNAME)
 client.create_database(DBNAME)
 # client.switch_database(DBNAME)
-# client.create_retention_policy('awesome_policy', '2d', 3, default=True)
+client.create_retention_policy('shorty', '2d', 3, default=True)
 
 num_days = 1000
 
@@ -62,7 +62,7 @@ def populate_db_current(sc):
         ]
 
     print client.write_points(json_body)
-    s.enter(60, 1, populate_db_current, (sc,))
+    s.enter(2, 1, populate_db_current, (sc,))
 
 def main():
     #populate_db_current()
