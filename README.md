@@ -1,6 +1,12 @@
 # USD To INR
 US Dollars to Indian Rupee helper for trends and notifications
 
+URL - http://http://35.197.19.206
+```
+Username - guest
+Password - guest
+```
+
 # Dependencies
 ```python
 pip install beautifulsoup4==4.5.3
