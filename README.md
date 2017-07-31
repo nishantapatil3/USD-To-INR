@@ -1,7 +1,7 @@
 # USD To INR
 US Dollars to Indian Rupee helper for trends and notifications
 
-URL - http://http://35.197.19.206
+URL - http://35.197.19.206
 ```
 Username - guest
 Password - guest
