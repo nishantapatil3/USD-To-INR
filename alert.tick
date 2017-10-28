@@ -1,9 +1,0 @@
-stream
-    |from()
-        .measurement('rate')
-    |alert()
-        .id('{{ .Name}}')
-	.message('{{ .ID}} is greater than 64.0 INR:{{ index .Fields "INR"}}')
-	.info(lambda: int("INR") > 64)
-	.slack()
-	.channel('#general')
