@@ -15,9 +15,9 @@ port = 8086
 
 client = InfluxDBClient(host, port, USER, PASSWORD, DBNAME)
 # client.drop_database(DBNAME)
-client.create_database(DBNAME)
+# client.create_database(DBNAME)
 # client.switch_database(DBNAME)
-client.create_retention_policy('shorty', '2d', 3, default=True)
+# client.create_retention_policy('one month', '30d', 3, default=True)
 
 num_days = 1000
 
@@ -65,10 +65,10 @@ def populate_db_current(sc):
     print client.write_points(json_body)
 
     #slack notification
-    print current_rate
-    if (current_rate > ('64.4')):
-	slack_push_text = "Current INR rate is above 64.4: " + current_rate
-	slack_push(slack_push_text)
+#    print current_rate
+#    if (current_rate > ('64.4')):
+#	slack_push_text = "Current INR rate is above 64.4: " + current_rate
+#	slack_push(slack_push_text)
 
     s.enter(300, 1, populate_db_current, (sc,))
 
