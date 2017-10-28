@@ -1,9 +1,10 @@
+#!/usr/bin/python
+
 import datetime
 from fixerio import Fixerio
 from influxdb import InfluxDBClient
 from get_exchange_info import *
 import sched, time
-from slack_test import *
 
 s = sched.scheduler(time.time, time.sleep)
 
@@ -63,13 +64,6 @@ def populate_db_current(sc):
         ]
 
     print client.write_points(json_body)
-
-    #slack notification
-#    print current_rate
-#    if (current_rate > ('64.4')):
-#	slack_push_text = "Current INR rate is above 64.4: " + current_rate
-#	slack_push(slack_push_text)
-
     s.enter(300, 1, populate_db_current, (sc,))
 
 def main():
