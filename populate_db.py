@@ -1,7 +1,5 @@
-#!/usr/bin/python
-
 import datetime
-from fixerio import Fixerio
+# from fixerio import Fixerio
 from influxdb import InfluxDBClient
 from get_exchange_info import *
 import sched, time
@@ -22,7 +20,7 @@ client = InfluxDBClient(host, port, USER, PASSWORD, DBNAME)
 
 num_days = 1000
 
-
+"""
 def get_usd_inr_history(day):
     rates = Fixerio(base='USD', symbols=['USD', 'INR'])
     return rates.historical_rates(day)
@@ -46,7 +44,7 @@ def populate_db_history():
             }
         ]
         print client.write_points(json_body)
-
+"""
 
 def populate_db_current(sc):
     rate_dict = {}
